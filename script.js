@@ -1,5 +1,4 @@
 const inputEmail = document.getElementById('email');
-const btnAvancar = document.getElementById('btnAvancar');
 const btnCancelar = document.getElementById('btnCancelar');
 const chaosForm = document.getElementById('chaosForm');
 const msgStatus = document.getElementById('mensagem-status');
@@ -10,20 +9,13 @@ inputEmail.addEventListener('input', (e) => {
     e.target.value = textoAtual.split('').reverse().join('');
 });
 
-// 2. Pegadinha do Botão Fugiço (O botão de avançar foge do mouse)
-btnAvancar.addEventListener('mouseover', () => {
-    const randomX = Math.floor(Math.random() * 200) - 100;
-    const randomY = Math.floor(Math.random() * 100) - 50;
-    btnAvancar.style.transform = `translate(${randomX}px, ${randomY}px)`;
-});
-
-// 3. Pegadinha do Botão Cancelar (Se clicar, zera tudo)
+// 2. Pegadinha do Botão Cancelar (Se clicar, zera tudo)
 btnCancelar.addEventListener('click', () => {
     alert("Ops! Você clicou no botão mais chamativo. O formulário será reiniciado!");
     chaosForm.reset();
 });
 
-// 4. Validação da Senha Filósofa antes de permitir o envio real
+// 3. Validação da Senha Filósofa antes de permitir o envio real
 chaosForm.addEventListener('submit', (e) => {
     const senha = document.getElementById('senha').value;
     
@@ -35,5 +27,5 @@ chaosForm.addEventListener('submit', (e) => {
         return;
     }
 
-    // Se passar por tudo, o formulário é enviado de verdade via FormSubmit!
+    // Se passar por tudo, o botão agora fica fixo e o formulário envia de verdade via FormSubmit!
 });
