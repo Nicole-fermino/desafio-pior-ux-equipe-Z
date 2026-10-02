@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Pior Cadastro do Mundo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastre-se... Se Conseguir!</h1>
+        <p id="mensagem-status">Preencha os campos abaixo com muita paciência.</p>
+        
+        <form id="chaosForm">
+            <!-- Campo Nome -->
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" placeholder="Digite seu nome">
+            </div>
+
+            <!-- Campo E-mail Invertido -->
+            <div class="campo">
+                <label for="email">E-mail (Cuidado com a digitação):</label>
+                <input type="text" id="email" placeholder="nome@exemplo.com">
+            </div>
+
+            <!-- Campo Senha Filósofa -->
+            <div class="campo">
+                <label for="senha">Senha Secreta:</label>
+                <input type="password" id="senha" placeholder="Digite sua senha">
+                <span id="dica-senha" class="dica">Dica: A senha exige pureza espiritual.</span>
+            </div>
+
+            <!-- Área de Botões Invertidos / Fugiços -->
+            <div class="botoes">
+                <!-- Botão Cancelar Gigante e Chamativo -->
+                <button type="button" id="btnCancelar" class="btn-perigoso">❌ CANCELAR TUDO</button>
+                
+                <!-- Botão Avançar Frágil e Fugiço -->
+                <button type="submit" id="btnAvancar" class="btn-quase-invisivel">Avançar</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Tela Final Oculta de Vitória -->
+    <div id="telaSucesso" class="sucesso hidden">
+        <h1>🎉 PARABÉNS! 🎉</h1>
+        <p>Você sobreviveu à pior experiência de usuário do mundo e provou que tem paciência de aço.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
